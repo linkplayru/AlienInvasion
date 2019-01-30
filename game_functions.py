@@ -33,11 +33,12 @@ def fire_bullet(ai_settings, screen, ship, bullets):
 		new_bullet = Bullet(ai_settings, screen, ship)
 		bullets.add(new_bullet)
 
-def update_screen(ai_settings, screen, ship, bullets):
+def update_screen(ai_settings, screen, ship, alien, bullets):
 	screen.fill(ai_settings.bg_color)
 	for bullet in bullets:
 		bullet.draw_bullet()
 	ship.blitme()
+	alien.blitme()
 	pygame.display.flip()
 	
 def update_bullets(bullets):
