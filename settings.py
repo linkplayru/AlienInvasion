@@ -4,7 +4,7 @@ class Settings():
 		#screen
 		self.screen_caption = 'Alien Invasion'
 		self.screen_width = 1024
-		self.screen_height = 768
+		self.screen_height = 800
 		self.bg_color = (230, 230, 230)
 		
 		#ship
