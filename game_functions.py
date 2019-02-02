@@ -151,7 +151,7 @@ def ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets):
 		stats.game_active = False
 		pygame.mouse.set_visible(True)
 			
-def check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets):
+def check_aliens_bottom(ai_settings, stats, sb, screen, ship, aliens, bullets):
 	screen_rect = screen.get_rect()
 	for alien in aliens.sprites():
 		if alien.rect.bottom >= screen_rect.bottom:
@@ -163,7 +163,7 @@ def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):
 	aliens.update()
 	if pygame.sprite.spritecollideany(ship, aliens):
 		ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets)
-	check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets)
+	check_aliens_bottom(ai_settings, stats, sb, screen, ship, aliens, bullets)
 	
 def check_high_score(stats, sb):
 	if (stats.score > stats.high_score):
