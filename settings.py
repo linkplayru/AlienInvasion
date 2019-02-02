@@ -5,15 +5,15 @@ class Settings():
 		self.screen_caption = 'Alien Invasion'
 		self.screen_width = 1200
 		self.screen_height = 800
-		self.bg_color = (230, 230, 230)
+		self.bg_color = (52, 52, 52)
 		
 		#ship
 		self.ship_limit = 3
 		
 		#bullet
-		self.bullet_width = 3
+		self.bullet_width = 10
 		self.bullet_height = 15
-		self.bullet_color = (60, 60, 60)
+		self.bullet_color = (206, 23, 23)
 		self.bullets_allowed = 3
 
 		#aliens

@@ -73,7 +73,7 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number):
 	alien_width = alien.rect.width
 	alien.x = alien_width + 2 * alien_width * alien_number
 	alien.rect.x = alien.x
-	alien.y = alien.rect.height + 2 * alien.rect.height * row_number
+	alien.y = alien.rect.height + 50 + 2 * alien.rect.height * row_number
 	alien.rect.y = alien.y
 	aliens.add(alien)
 		
@@ -102,12 +102,11 @@ def update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_bu
 	for bullet in bullets.sprites():
 		bullet.draw_bullet()
 	ship.blitme()
+	sb.show_score()
 	aliens.draw(screen)
 	
 	if not stats.game_active:
 		play_button.draw_button()
-		
-	sb.show_score()
 	
 	pygame.display.flip()
 	
@@ -150,7 +149,7 @@ def check_aliens_bottom(ai_settings, stats, screen, ship, aliens, bullets):
 	screen_rect = screen.get_rect()
 	for alien in aliens.sprites():
 		if alien.rect.bottom >= screen_rect.bottom:
-			ship_hit(ai_settings, stats, screen, ship, aliens, bullets)
+			ship_hit(ai_settings, screen, stats, sb, ship, aliens, bullets)
 			break
 			
 def update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets):

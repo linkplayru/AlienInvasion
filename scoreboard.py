@@ -11,8 +11,8 @@ class Scoreboard():
 		self.ai_settings = ai_settings
 		self.stats = stats
 		
-		self.text_color = (30, 30, 30)
-		self.font = pygame.font.SysFont(None, 48)
+		self.text_color = (230, 230, 230)
+		self.font = pygame.font.Font('fonts/Pokemon GB.ttf', 32)
 		
 		self.prep_score()
 		self.prep_high_score()

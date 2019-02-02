@@ -20,7 +20,7 @@ def run_game():
 	ship = Ship(ai_settings, screen)
 	bullets = Group()
 	aliens = Group()
-	play_button = Button(ai_settings, screen, 'Play')
+	play_button = Button(ai_settings, screen, 'play')
 	gf.create_fleet(ai_settings, screen, ship, aliens)
 	
 	#main cycle
